@@ -7,16 +7,52 @@
 //
 
 import UIKit
+import Parse
 
 class AddTaskViewController: UIViewController {
 
+    @IBOutlet weak var enterTaskName: UITextField!
+    @IBOutlet weak var enterTaskDetail: UITextField!
+    
+    var task: PFObject!
+    var tasks_list: [PFObject] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let user = PFUser.current()!
+        
+        if user["tasks"] != nil {
+            tasks_list = user["tasks"] as! [PFObject]
+        }
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func addTask(_ sender: Any) {
+        let user = PFUser.current()!
+        task = PFObject(className: "Tasks")
+        task["name"] = enterTaskName.text
+        task["details"] = enterTaskDetail.text
+        
+        user.add(task, forKey: "tasks");
+        
+        user.saveInBackground { (success, error) in
+            if success {
+                print("task saved")
+            } else {
+                print("Error saving task")
+            }
+        }
+        
+        clear()
+    }
+    
+    func clear()
+    {
+        enterTaskName.text = ""
+        enterTaskDetail.text = ""
+    }
+    
     /*
     // MARK: - Navigation
 
