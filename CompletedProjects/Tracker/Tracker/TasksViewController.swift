@@ -12,6 +12,7 @@ import Parse
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
+//    var select: Bool = false
     
     let user = PFUser.current()!
     var tasks_list: [PFObject] = []
@@ -89,6 +90,14 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.taskNameLabel.text = task["name"] as? String
             cell.taskDetailLabel.text = task["details"] as? String
             
+            let completion = task["complete"] as! Bool
+            if completion == true {
+                print("should now be here")
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+            }
+            else{
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+            }
         }
         else {
             print( "in here" )
@@ -99,16 +108,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if tasks_info.count != 0 {
-            if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
-                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
-            }
-            else {
-                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
-            }
-        }
-    }
     
     @IBAction func logoutClicked(_ sender: Any) {
         PFUser.logOut()
@@ -119,6 +118,38 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let delegate = UIApplication.shared.delegate as! AppDelegate
         
         delegate.window?.rootViewController = loginViewController 
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tasks_info.count != 0 {
+            var task = self.tasks_info[indexPath.row]
+            if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+                task["complete"] = false
+                user.saveInBackground { (success, error) in
+                    if success {
+                        print("task completion to false saved")
+                    } else {
+                        print("Error saving task completion to false")
+                    }
+                }
+                self.tableView.reloadData()
+            }
+            else {
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+                task["complete"] = true
+                print("coming in here")
+                user.saveInBackground { (success, error) in
+                    if success {
+                        print("task completion to true saved")
+                    } else {
+                        print("Error saving task completion to true")
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        }
     }
     
     /*

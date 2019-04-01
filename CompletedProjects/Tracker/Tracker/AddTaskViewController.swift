@@ -33,6 +33,7 @@ class AddTaskViewController: UIViewController {
         task = PFObject(className: "Tasks")
         task["name"] = enterTaskName.text
         task["details"] = enterTaskDetail.text
+        task["complete"] = false
         
         user.add(task, forKey: "tasks");
         
