@@ -11,12 +11,15 @@
 		4C4573DB7C91E38A27824E93 /* Pods_TrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40078286323DAF81ECD30B3B /* Pods_TrackerTests.framework */; };
 		8D7C5B3CF71EAB0DA99103E0 /* Pods_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B5F306A900B88E3ED587CE3 /* Pods_Tracker.framework */; };
 		ADC6AE232251B09800DE939E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6AE222251B09800DE939E /* AppDelegate.swift */; };
-		ADC6AE252251B09800DE939E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6AE242251B09800DE939E /* ViewController.swift */; };
 		ADC6AE282251B09800DE939E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC6AE262251B09800DE939E /* Main.storyboard */; };
 		ADC6AE2A2251B09B00DE939E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC6AE292251B09B00DE939E /* Assets.xcassets */; };
 		ADC6AE2D2251B09B00DE939E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADC6AE2B2251B09B00DE939E /* LaunchScreen.storyboard */; };
 		ADC6AE382251B09B00DE939E /* TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6AE372251B09B00DE939E /* TrackerTests.swift */; };
 		ADC6AE432251B09B00DE939E /* TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6AE422251B09B00DE939E /* TrackerUITests.swift */; };
+		ADC6AE512251BFCD00DE939E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6AE502251BFCD00DE939E /* LoginViewController.swift */; };
+		ADC6AE532251BFF300DE939E /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6AE522251BFF300DE939E /* TasksViewController.swift */; };
+		ADC6AE552251D60F00DE939E /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6AE542251D60E00DE939E /* TaskTableViewCell.swift */; };
+		ADC6AE572251D75A00DE939E /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC6AE562251D75A00DE939E /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +48,6 @@
 		A41A6D7F35127316C1CEF3A9 /* Pods-TrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerUITests/Pods-TrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADC6AE1F2251B09800DE939E /* Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC6AE222251B09800DE939E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADC6AE242251B09800DE939E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ADC6AE272251B09800DE939E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADC6AE292251B09B00DE939E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADC6AE2C2251B09B00DE939E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,6 +58,10 @@
 		ADC6AE3E2251B09B00DE939E /* TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC6AE422251B09B00DE939E /* TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackerUITests.swift; sourceTree = "<group>"; };
 		ADC6AE442251B09B00DE939E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADC6AE502251BFCD00DE939E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ADC6AE522251BFF300DE939E /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
+		ADC6AE542251D60E00DE939E /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		ADC6AE562251D75A00DE939E /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		C1E34DA99E6591A755DDB1BD /* Pods-Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tracker/Pods-Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		E6D743222C64E7E66D442605 /* Pods-Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tracker/Pods-Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		F951DC11E54F7B3DB6178660 /* Pods-TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackerTests/Pods-TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,11 +131,14 @@
 			isa = PBXGroup;
 			children = (
 				ADC6AE222251B09800DE939E /* AppDelegate.swift */,
-				ADC6AE242251B09800DE939E /* ViewController.swift */,
 				ADC6AE262251B09800DE939E /* Main.storyboard */,
 				ADC6AE292251B09B00DE939E /* Assets.xcassets */,
 				ADC6AE2B2251B09B00DE939E /* LaunchScreen.storyboard */,
 				ADC6AE2E2251B09B00DE939E /* Info.plist */,
+				ADC6AE502251BFCD00DE939E /* LoginViewController.swift */,
+				ADC6AE522251BFF300DE939E /* TasksViewController.swift */,
+				ADC6AE542251D60E00DE939E /* TaskTableViewCell.swift */,
+				ADC6AE562251D75A00DE939E /* AddTaskViewController.swift */,
 			);
 			path = Tracker;
 			sourceTree = "<group>";
@@ -397,8 +406,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC6AE252251B09800DE939E /* ViewController.swift in Sources */,
+				ADC6AE552251D60F00DE939E /* TaskTableViewCell.swift in Sources */,
+				ADC6AE512251BFCD00DE939E /* LoginViewController.swift in Sources */,
 				ADC6AE232251B09800DE939E /* AppDelegate.swift in Sources */,
+				ADC6AE532251BFF300DE939E /* TasksViewController.swift in Sources */,
+				ADC6AE572251D75A00DE939E /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
