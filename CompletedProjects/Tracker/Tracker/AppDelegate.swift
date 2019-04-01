@@ -25,6 +25,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
+        if PFUser.current() != nil {
+            let main = UIStoryboard(name: "Main", bundle: nil)
+            
+            let tasksNavigationController = main.instantiateViewController(withIdentifier: "TasksNavigationController")
+            
+            window?.rootViewController = tasksNavigationController
+        }
+        
         return true
     }
 
