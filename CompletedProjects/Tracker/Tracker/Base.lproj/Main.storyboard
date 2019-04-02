@@ -147,7 +147,7 @@
                                 <action selector="logoutClicked:" destination="Q64-3J-YhV" id="mBv-fn-Gd5"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="+" id="cPi-Sf-edd">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cPi-Sf-edd">
                             <connections>
                                 <segue destination="DOb-np-bia" kind="push" id="IXI-PJ-xYc"/>
                             </connections>

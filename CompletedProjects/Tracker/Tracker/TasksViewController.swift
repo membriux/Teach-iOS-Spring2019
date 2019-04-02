@@ -12,7 +12,6 @@ import Parse
 class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView!
-//    var select: Bool = false
     
     let user = PFUser.current()!
     var tasks_list: [PFObject] = []
@@ -64,7 +63,6 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 }
             }
         }
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,12 +89,13 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.taskDetailLabel.text = task["details"] as? String
             
             let completion = task["complete"] as! Bool
-            if completion == true {
-                print("should now be here")
-                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+            print("completion: ", completion)
+            if (completion) {
+                print("should now be here") 
+                cell.accessoryType = UITableViewCell.AccessoryType.checkmark
             }
             else{
-                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+                cell.accessoryType = UITableViewCell.AccessoryType.none
             }
         }
         else {
@@ -123,31 +122,33 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tasks_info.count != 0 {
-            var task = self.tasks_info[indexPath.row]
+            let task = self.tasks_info[indexPath.row]
+            
             if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
+
                 task["complete"] = false
-                user.saveInBackground { (success, error) in
+                task.saveInBackground { (success, error) in
                     if success {
                         print("task completion to false saved")
                     } else {
                         print("Error saving task completion to false")
                     }
                 }
-                self.tableView.reloadData()
+                user.saveInBackground()
             }
             else {
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
+                print("coming in true checkmark")
                 task["complete"] = true
-                print("coming in here")
-                user.saveInBackground { (success, error) in
+                task.saveInBackground { (success, error) in
                     if success {
                         print("task completion to true saved")
                     } else {
                         print("Error saving task completion to true")
                     }
                 }
-                self.tableView.reloadData()
+                user.saveInBackground()
             }
         }
     }

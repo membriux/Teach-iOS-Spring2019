@@ -35,7 +35,7 @@ class AddTaskViewController: UIViewController {
         task["details"] = enterTaskDetail.text
         task["complete"] = false
         
-        user.add(task, forKey: "tasks");
+        user.add(task!, forKey: "tasks");
         
         user.saveInBackground { (success, error) in
             if success {
