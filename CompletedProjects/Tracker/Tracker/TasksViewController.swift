@@ -34,7 +34,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             self.tasks_list.removeAll()
             tasks_list.removeAll()
             self.tasks_list = user["tasks"] as! [PFObject]
-            print(tasks_list.count)
+//            print(tasks_list.count)
             getUserTasks()
         }
         tableView.reloadData()
@@ -72,8 +72,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
         else {
             tasks_info.removeAll()
             self.tasks_list.removeAll()
-            print(tasks_list.count)
-            print(tasks_info.count)
+//            print(tasks_list.count)
+//            print(tasks_info.count)
             return 1
         }
     }
@@ -89,9 +89,9 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             cell.taskDetailLabel.text = task["details"] as? String
             
             let completion = task["complete"] as! Bool
-            print("completion: ", completion)
+//            print("completion: ", completion)
             if (completion) {
-                print("should now be here") 
+//                print("should now be here")
                 cell.accessoryType = UITableViewCell.AccessoryType.checkmark
             }
             else{
@@ -99,7 +99,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
             }
         }
         else {
-            print( "in here" )
+//            print( "in here" )
             cell.taskNameLabel.text = ""
             cell.taskDetailLabel.text = "Add tasks!"
             
@@ -135,11 +135,16 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         print("Error saving task completion to false")
                     }
                 }
-                user.saveInBackground()
+                user.saveInBackground{(success, error) in
+                    if success {
+                        print("user saved task completion to false")
+                    } else {
+                        print("Error user saving task completion to false")
+                    }}
             }
             else {
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
-                print("coming in true checkmark")
+//                print("coming in true checkmark")
                 task["complete"] = true
                 task.saveInBackground { (success, error) in
                     if success {
@@ -148,7 +153,12 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         print("Error saving task completion to true")
                     }
                 }
-                user.saveInBackground()
+                user.saveInBackground{(success, error) in
+                    if success {
+                        print("user saved task completion to true")
+                    } else {
+                        print("Error user saving task completion to true")
+                    }}
             }
         }
     }
