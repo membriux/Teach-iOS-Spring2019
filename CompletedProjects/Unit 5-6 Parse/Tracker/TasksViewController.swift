@@ -51,6 +51,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let query = PFQuery(className: "Tasks")
                 query.whereKey("objectId", equalTo: task.objectId!)
                 
+                query.order(byAscending: "createdAt")
+                
                 query.findObjectsInBackground { (task, error) in
                     if error != nil {
                         print(error!.localizedDescription)
@@ -123,6 +125,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tasks_info.count != 0 {
             let task = self.tasks_info[indexPath.row]
+            tableView.deselectRow(at: indexPath, animated: true)
             
             if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
