@@ -13,9 +13,16 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var tableView: UITableView!
     
+    // initialize the current user
     let user = PFUser.current()!
+    
+    // list  to get from parse
     var tasks_list: [PFObject] = []
+    
+    // list to get and disply info
     var tasks_info: [PFObject] = []
+    
+    // both lists should be the same and does not matter which to use
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,6 +11,7 @@ import Parse
 
 class LoginViewController: UIViewController {
     
+    // user name and password text fields
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -20,6 +21,7 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // if one already has account automatically sign them in
     @IBAction func signIn(_ sender: Any) {
         let username = userTextField.text!
         let password = passwordTextField.text!
@@ -33,6 +35,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    // when click create account, will create account in background 
     @IBAction func createAccount(_ sender: Any) {
         let user = PFUser()
         
