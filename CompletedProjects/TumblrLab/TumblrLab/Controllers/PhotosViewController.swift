@@ -61,5 +61,22 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         
         return cell
     }
+    
+    // argument labels
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get a reference to the PhotoDetailsViewController
+        let photoDetailsVC = segue.destination as! PhotoDetailsViewController
+
+        // Get a reference to cell that triggered the segue
+        let cell = sender as! PhotoCell
+
+        // Get indexPath of the cell
+        //let indexPath = tableView.indexPath(for: cell)
+
+        let image = cell.photoView.image
+
+        photoDetailsVC.image = image
+
+    }
 
 }
