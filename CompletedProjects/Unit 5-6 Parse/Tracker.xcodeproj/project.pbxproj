@@ -130,15 +130,13 @@
 		ADC6AE212251B09800DE939E /* Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				ADC6AE5E225CD82000DE939E /* AddingTask */,
+				ADC6AE5D225CD80400DE939E /* Tasks */,
+				ADC6AE5C225CD7EC00DE939E /* Login */,
+				ADC6AE5B225CD7B600DE939E /* Views */,
 				ADC6AE222251B09800DE939E /* AppDelegate.swift */,
-				ADC6AE262251B09800DE939E /* Main.storyboard */,
 				ADC6AE292251B09B00DE939E /* Assets.xcassets */,
-				ADC6AE2B2251B09B00DE939E /* LaunchScreen.storyboard */,
 				ADC6AE2E2251B09B00DE939E /* Info.plist */,
-				ADC6AE502251BFCD00DE939E /* LoginViewController.swift */,
-				ADC6AE522251BFF300DE939E /* TasksViewController.swift */,
-				ADC6AE542251D60E00DE939E /* TaskTableViewCell.swift */,
-				ADC6AE562251D75A00DE939E /* AddTaskViewController.swift */,
 			);
 			path = Tracker;
 			sourceTree = "<group>";
@@ -159,6 +157,40 @@
 				ADC6AE442251B09B00DE939E /* Info.plist */,
 			);
 			path = TrackerUITests;
+			sourceTree = "<group>";
+		};
+		ADC6AE5B225CD7B600DE939E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6AE262251B09800DE939E /* Main.storyboard */,
+				ADC6AE2B2251B09B00DE939E /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADC6AE5C225CD7EC00DE939E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6AE502251BFCD00DE939E /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ADC6AE5D225CD80400DE939E /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6AE542251D60E00DE939E /* TaskTableViewCell.swift */,
+				ADC6AE522251BFF300DE939E /* TasksViewController.swift */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		ADC6AE5E225CD82000DE939E /* AddingTask */ = {
+			isa = PBXGroup;
+			children = (
+				ADC6AE562251D75A00DE939E /* AddTaskViewController.swift */,
+			);
+			path = AddingTask;
 			sourceTree = "<group>";
 		};
 		B83F8FF90C7E6F6299391D39 /* Pods */ = {

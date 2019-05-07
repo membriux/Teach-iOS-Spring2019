@@ -13,9 +13,16 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var tableView: UITableView!
     
+    // initialize the current user
     let user = PFUser.current()!
+    
+    // list  to get from parse
     var tasks_list: [PFObject] = []
+    
+    // list to get and disply info
     var tasks_info: [PFObject] = []
+    
+    // both lists should be the same and does not matter which to use
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +57,8 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 print("taskID", task.objectId!)
                 let query = PFQuery(className: "Tasks")
                 query.whereKey("objectId", equalTo: task.objectId!)
+                
+                query.order(byAscending: "createdAt")
                 
                 query.findObjectsInBackground { (task, error) in
                     if error != nil {
@@ -123,6 +132,7 @@ class TasksViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tasks_info.count != 0 {
             let task = self.tasks_info[indexPath.row]
+            tableView.deselectRow(at: indexPath, animated: true)
             
             if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
                 tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
