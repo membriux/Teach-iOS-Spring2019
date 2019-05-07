@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TumblrLab/Controllers/PhotosViewController.swift"
+            timestampString = "577035861.5829329"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "PhotosViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TumblrLab.PhotosViewController.tableView.getter : weak Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "TumblrLab"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilypham/Documents/GitHub/Teach-iOS-Spring2019/CompletedProjects/TumblrLab/TumblrLab/Controllers/PhotosViewController.swift"
+                  timestampString = "577035367.977527"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TumblrLab.PhotosViewController.tableView.setter : weak Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "TumblrLab"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilypham/Documents/GitHub/Teach-iOS-Spring2019/CompletedProjects/TumblrLab/TumblrLab/Controllers/PhotosViewController.swift"
+                  timestampString = "577035367.980087"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TumblrLab.PhotosViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; TumblrLab.PhotosViewController"
+                  moduleName = "TumblrLab"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilypham/Documents/GitHub/Teach-iOS-Spring2019/CompletedProjects/TumblrLab/TumblrLab/Controllers/PhotosViewController.swift"
+                  timestampString = "577035367.981679"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TumblrLab.PhotosViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TumblrLab.PhotosViewController&gt;"
+                  moduleName = "TumblrLab"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilypham/Documents/GitHub/Teach-iOS-Spring2019/CompletedProjects/TumblrLab/TumblrLab/Controllers/PhotosViewController.swift"
+                  timestampString = "577035367.983169"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TumblrLab/Controllers/PhotosViewController.swift"
+            timestampString = "577035861.583068"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "PhotosViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TumblrLab.PhotosViewController.tableView.getter : weak Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "TumblrLab"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilypham/Documents/GitHub/Teach-iOS-Spring2019/CompletedProjects/TumblrLab/TumblrLab/Controllers/PhotosViewController.swift"
+                  timestampString = "577035368.950514"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TumblrLab.PhotosViewController.tableView.setter : weak Swift.Optional&lt;__C.UITableView&gt;"
+                  moduleName = "TumblrLab"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilypham/Documents/GitHub/Teach-iOS-Spring2019/CompletedProjects/TumblrLab/TumblrLab/Controllers/PhotosViewController.swift"
+                  timestampString = "577035368.953056"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TumblrLab.PhotosViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; TumblrLab.PhotosViewController"
+                  moduleName = "TumblrLab"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilypham/Documents/GitHub/Teach-iOS-Spring2019/CompletedProjects/TumblrLab/TumblrLab/Controllers/PhotosViewController.swift"
+                  timestampString = "577035368.956158"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TumblrLab.PhotosViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;TumblrLab.PhotosViewController&gt;"
+                  moduleName = "TumblrLab"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/lilypham/Documents/GitHub/Teach-iOS-Spring2019/CompletedProjects/TumblrLab/TumblrLab/Controllers/PhotosViewController.swift"
+                  timestampString = "577035368.9583859"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "50">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
