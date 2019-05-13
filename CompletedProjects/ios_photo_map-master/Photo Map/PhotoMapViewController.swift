@@ -11,7 +11,10 @@ import MapKit
 
 class PhotoMapViewController: UIViewController, LocationsViewControllerDelegate {
 
+    /* ------ TODO: Create mapView outlet */
     @IBOutlet weak var mapView: MKMapView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

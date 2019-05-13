@@ -61,6 +61,9 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
         let lngString = "\(lng)"
 
         print(latString + " " + lngString)
+        
+        /* ----- TODO ----- */
+        // Set the latitude and longitude of the venue and send it to the protocol
         delegate.locationsPickedLocation(controller: self, latitude: CLLocationDegrees(lat), longitude: CLLocationDegrees(lng))
         
         // Return to the PhotoMapViewController
